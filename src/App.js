@@ -1,70 +1,209 @@
-import { useState } from 'react';
-import Banner from './componentes/Banner';
-import Formulario from './componentes/Formulario';
-import Time from './componentes/Time';
-import Rodape from './componentes/Rodape';
+import { useState } from "react";
+import Banner from "./componentes/Banner";
+import Formulario from "./componentes/Formulario";
+import Rodape from "./componentes/Rodape";
+import Time from "./componentes/Time";
 
 function App() {
 
   const times = [
     {
       nome: 'Diagramador',
-      corPrimaria: '#57C278',
-      corSecundaria: '#D9F7E9',
+      corPrimaria: '#D9F7E9',
+      corSecundaria: '#57C278'
     },
     {
       nome: 'Capista',
-      corPrimaria: '#82CFFA',
-      corSecundaria: '#E8F8FF',
+      corPrimaria: '#E8F8FF',
+      corSecundaria: '#82CFFA'
     },
     {
       nome: 'Editor',
-      corPrimaria: '#A6D157',
-      corSecundaria: '#F0F8E2',
+      corPrimaria: '#F0F8E2',
+      corSecundaria: '#A6D157'
     },
     {
       nome: 'Comercial',
-      corPrimaria: '#E06B69',
-      corSecundaria: '#FDE7E8',
+      corPrimaria: '#FDE7E8',
+      corSecundaria: '#E06B69'
     },
     {
       nome: 'Diretoria',
-      corPrimaria: '#DB6EBF',
-      corSecundaria: '#FAE9F5',
+      corPrimaria: '#FAE9F5',
+      corSecundaria: '#DB6EBF'
     },
     {
       nome: 'Financeiro',
-      corPrimaria: '#FFBA05',
-      corSecundaria: '#FFF5D9',
+      corPrimaria: '#FFF5D9',
+      corSecundaria: '#FFBA05'
     },
     {
       nome: 'SAC',
-      corPrimaria: '#FF8A29',
-      corSecundaria: '#FFEEDF',
-    }
+      corPrimaria: '#FFEEDF',
+      corSecundaria: '#FF8A29'
+    },
   ]
 
-  const [colaboradores, setColaboradores] = useState([])
+  const inicial = [
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[0].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[0].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[0].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[0].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[1].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[1].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[1].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[1].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[2].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[2].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[2].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[2].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[3].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[3].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[3].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[3].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[4].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[4].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[4].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[4].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[5].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[5].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[5].nome
+    },
+    {
+      nome: 'WILLIAN MACIEL',
+      cargo: 'Advogado e aspirante de dev.',
+      imagem: 'https://www.github.com/wilmaciel.png',
+      time: times[5].nome
+    },
+  ]
 
-  const aoNovoColaboradorAdicionado = (colaborador) => {
-    setColaboradores([...colaboradores, colaborador])
-  }
+  const [colaboradores, setColaboradores] = useState(inicial)
+
 
   return (
-    <div className="App">
+    <div>
       <Banner />
-      <Formulario times={times.map(time => time.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
-      {times.map(time => <Time 
-      key={time.nome} 
-      nome={time.nome} 
-      corPrimaria={time.corPrimaria} 
-      corSecundaria={time.corSecundaria}
-      colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
-      />)}
-    <Rodape />
+      <Formulario times={times.map(time => time.nome)} aoCadastrar={colaborador => setColaboradores([...colaboradores, colaborador])} />
+      <section className="times">
+        <h1>Minha organização</h1>
+        {times.map((time, indice) => <Time key={indice} time={time} colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)} />)}
+      </section>
+      <Rodape />
     </div>
-    
-
   );
 }
 
