@@ -4,9 +4,10 @@ import Formulario from "./componentes/Formulario";
 import Rodape from "./componentes/Rodape";
 import Time from "./componentes/Time";
 import { v4 as uuidv4 } from 'uuid';
+import { useMediaQuery } from 'react-responsive'
 
 function App() {
-
+  const isMobile = useMediaQuery({ maxWidth: 767 });
   const [times, setTimes] = useState([
     {
       id: uuidv4(),
@@ -243,7 +244,7 @@ function App() {
         times={times.map(time => time.nome)} 
         aoCadastrar={colaborador => setColaboradores([...colaboradores, colaborador])} 
       />
-      <section className="times">
+      <section className={`times ${isMobile ? 'mobile' : ''}`}>
         <h1>Minha organização</h1>
         {times.map((time, indice) => 
           <Time
