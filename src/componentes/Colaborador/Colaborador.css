@@ -1,6 +1,7 @@
 .colaborador {
     position: relative;
     width: 280px;
+    padding-bottom: 16px;
 }
 
 .colaborador .cabecalho {
