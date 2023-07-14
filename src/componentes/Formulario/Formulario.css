@@ -1,14 +1,16 @@
 .formulario-container {
     display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
     justify-content: center;
-    margin: 80px 0;
+    margin: 80px 50px;
   }
   
   .formulario-container .formulario {
-    max-width: 80%;
     background: #F7F7F7;
     box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
+    flex: 1;
     padding: 36px 64px;
   }
   
@@ -16,34 +18,3 @@
     font-weight: 400;
     font-size: 32px;
   }
-  
-  @media screen and (max-width: 768px) {
-    .formulario-container {
-      margin: 40px 0;
-    }
-  
-    .formulario-container .formulario {
-      max-width: 90%;
-      padding: 24px 48px;
-    }
-  
-    .formulario-container .formulario h2 {
-      font-size: 28px;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .formulario-container {
-      margin: 20px 0;
-    }
-  
-    .formulario-container .formulario {
-      max-width: 100%;
-      padding: 16px 24px;
-    }
-  
-    .formulario-container .formulario h2 {
-      font-size: 24px;
-    }
-  }
-  
